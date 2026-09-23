@@ -6,12 +6,12 @@ const Topbar = () => {
     <>
       <div className="flex justify-around bg-orange-300 text-lg p-5 ">
         <div className="text-2xl font-bold text-red-500 ">E-Com</div>
-        <div className="flex justify-end gap-30 self-center">
-          <Link href="#">Home</Link>
-          <Link href="#">Messages</Link>
-          <Link href="#">Cart</Link>
-          <Link href="#"></Link>
-          <Link href="#"></Link>
+        <div className="flex gap-10 self-center">
+          <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center">Home</Link>
+          <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center">Messages</Link>
+          <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center">Cart</Link>
+          {/* <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center"></Link> */}
+          {/* <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center"></Link> */}
         </div>
       </div>
       <div className="flex justify-center bg-orange-300 pb-3 gap-5 transition-all ">
