@@ -11,6 +11,7 @@ const Topbar = () => {
           <Link href="#">Messages</Link>
           <Link href="#">Cart</Link>
           <Link href="#"></Link>
+          <Link href="#"></Link>
         </div>
       </div>
       <div className="flex justify-center bg-orange-300 pb-3 gap-5 transition-all ">
