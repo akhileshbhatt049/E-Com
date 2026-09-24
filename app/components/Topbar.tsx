@@ -4,22 +4,54 @@ import { CiSearch } from "react-icons/ci";
 const Topbar = () => {
   return (
     <>
-      <div className="flex justify-around bg-orange-300 text-lg p-5 ">
-        <div className="text-2xl font-bold text-red-500 ">E-Com</div>
-        <div className="flex gap-10 self-center">
-          <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center">Home</Link>
-          <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center">Messages</Link>
-          <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center">Cart</Link>
-          {/* <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center"></Link> */}
-          {/* <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center"></Link> */}
+      {/* Navbar */}
+      <nav className="bg-orange-400 shadow-md">
+        <div className="flex items-center justify-between max-w-7xl mx-auto  py-4 ">
+
+          {/* Logo */}
+          <Link href="/" className="text-3xl font-bold text-white" >
+            E<span className="text-red-600">-Com</span>
+          </Link>
+
+          {/* Navigation */}
+          <div className=" flex items-center gap-10">
+            <Link href="#" className="text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition duration-300">
+              Home
+            </Link>
+
+            <Link href="#" className="text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition duration-300" >
+              Messages
+            </Link>
+
+            <Link href="#" className="text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition duration-300" >
+              Cart
+            </Link>
+          </div>
+
+          {/* Login and SignUp Buttons */}
+          <div className="flex items-center gap-3">
+            <Link href="/login" className="border border-white px-4 py-2 rounded-lg text-white font-semibold shadow-sm hover:bg-white hover:text-orange-500 transition duration-300" >
+              Login
+            </Link>
+
+            <Link href="/signup" className="bg-red-500 px-4 py-2 rounded-lg font-semibold text-white shadow-sm hover:bg-red-600 transition duration-300" >
+              Sign Up
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="flex justify-center bg-orange-300 pb-3 gap-5 transition-all ">
-        <input type="text" name="Search" placeholder="Search Product" className="border-3 border-yellow-300 focus:outline-violet-50 text-lg rounded-lg px-3 py-2 w-200 "/>
-        <CiSearch className="text-4xl relative top-1 cursor-pointer"/>
-        <Link href="/login" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center"> LOGIN</Link>
-        <Link href="#" className="py-2 hover:bg-orange-400 px-2 h-10 rounded-lg self-center"> SIGN UP</Link>
-      </div>
+
+        {/* Search Bar */}
+        <div className="w-4xl mx-auto px-6 pb-5">
+          <div className="flex items-center relative ">
+
+            <input type="text" name="Search" placeholder="Search products" className="w-full h-12 bg-white px-4 pr-14 border-2 border-transparent rounded-lg text-gray-700 text-lg shadow-sm outline-none focus:border-orange-500 transition duration-300" />
+            <button type="button" className="flex items-center justify-center rounded-lg bg-orange-500 text-white absolute right-2 w-10 h-10 hover:bg-orange-600 transition duration-300" >
+              <CiSearch className="text-2xl" />
+            </button>
+
+          </div>
+        </div>
+      </nav>
     </>
   );
 };
