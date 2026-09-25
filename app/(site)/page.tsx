@@ -1,9 +1,11 @@
-import Topbar from "../components/Topbar";
+import ImageSlider from "../components/Slider";
+import Categories from "../components/categories";
 
-export default function page() {
+export default function Page() {
   return (
     <>
-      {/* <Topbar /> */}
+      <ImageSlider />
+      <Categories/>
     </>
   );
 }

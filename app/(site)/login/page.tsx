@@ -1,3 +1,5 @@
+"use client"
+// import Modal from "../../components/Modal";
 const LoginSignup = () => {
   return (
     <>
@@ -41,12 +43,13 @@ const LoginSignup = () => {
 
               <p className=" text-sm text-gray-500 text-center">
                 Don't have an account?
-                <button type="button" className="font-semibold text-green-600 hover:text-green-800 transition cursor-pointer">
+                <button type="button" className="font-semibold text-green-600 hover:text-green-800 transition cursor-pointer" onClick={()=> {Modal}}>
                   Sign Up
                 </button>
               </p>
             </form>
           </div>
+          
 
           {/* SIGNUP SIDE */}
           <div className="p-10 bg-white rounded-3xl shadow-2xl">
@@ -134,6 +137,10 @@ const LoginSignup = () => {
             </form>
           </div>
       </div>
+
+      {/* <Modal>
+        <h1 className="Bg-green-700">Loading...</h1>
+      </Modal> */}
     </>
   );
 };
